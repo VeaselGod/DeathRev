@@ -388,9 +388,9 @@ Button4.TextScaled = true
 Button4.TextSize = 14.000
 Button4.TextWrapped = true
 Button4.MouseButton1Down:connect(function()
-	local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
--- Create entity
+
 local entity = Creator.createEntity({
     CustomName = "Ambush", -- Custom name of your entity
     Model = "https://github.com/RegularVynixu/Utilities/blob/main/Doors%20Entity%20Spawner/Models/Ambush.rbxm?raw=true", -- Can be GitHub file or rbxassetid --ignore
@@ -442,7 +442,7 @@ local entity = Creator.createEntity({
     CustomDialog = {"You Died to who you call Ambush...", "It is a Tricky one.", "Use what you have learned from Rush!"}, -- Custom death message (can be as long as you want)
 })
 
------[[ Advanced ]]-----
+
 entity.Debug.OnEntitySpawned = function(entityModel)
     print("Entity has spawned:", entityModel) 
     wait(2.3)  --The thing that happens once the entity has spawned.
@@ -481,7 +481,7 @@ Button5.BackgroundTransparency = 0.800
 Button5.Position = UDim2.new(0.031088043, 0, 0.213083059, 0)
 Button5.Size = UDim2.new(0, 170, 0, 50)
 Button5.Font = Enum.Font.Cartoon
-Button5.Text = "Spawn Ambush[KILLABLE]"
+Button5.Text = "Spawn A-60[KILLABLE]"
 Button5.TextColor3 = Color3.fromRGB(255, 222, 189)
 Button5.TextScaled = true
 Button5.TextSize = 14.000
