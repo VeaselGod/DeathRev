@@ -118,9 +118,9 @@ local function func(ins)
         local Chains = game:GetObjects("rbxassetid://11584227521")[1]
         Chains.Parent = workspace
         local chained = true
-        local posTime = false
-        local rotTime = false
-        local tweenTime = false
+        local posTime = true
+        local rotTime = true
+        local tweenTime = true
         local intFound = true
 
         game:GetService("RunService").RenderStepped:Connect(function()
