@@ -382,7 +382,7 @@ Button4.BackgroundTransparency = 0.800
 Button4.Position = UDim2.new(0.497409284, 0, 0.115860835, 0)
 Button4.Size = UDim2.new(0, 170, 0, 50)
 Button4.Font = Enum.Font.Cartoon
-Button4.Text = "Spawn Ambush[KILLABLE]"
+Button4.Text = "Spawn A-60[KILLABLE]"
 Button4.TextColor3 = Color3.fromRGB(255, 222, 189)
 Button4.TextScaled = true
 Button4.TextSize = 14.000
@@ -391,15 +391,15 @@ Button4.MouseButton1Down:connect(function()
     local Creator = loadstring(game:HttpGet("https://pastebin.com/raw/PZJuLbR6"))() 
 -- Create entity
 local entity = Creator.createEntity({
-    CustomName = "Ambush", -- Custom name of your entity
-    Model = "https://github.com/RegularVynixu/Utilities/blob/main/Doors%20Entity%20Spawner/Models/Ambush.rbxm?raw=true", -- Can be GitHub file or rbxassetid
+    CustomName = "A-60", -- Custom name of your entity
+    Model = "rbxassetid:////11835351318", -- Can be GitHub file or rbxassetid
     Speed = 400, -- Percentage, 100 = default Rush speed
     DelayTime = 2, -- Time before starting cycles (seconds)
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
     BreakLights = true,
-    BackwardsMovement = false,
+    BackwardsMovement = true,
     FlickerLights = {
         true, -- Enabled/Disabled
         1, -- Time (seconds)
@@ -487,7 +487,7 @@ Button5.BackgroundTransparency = 0.800
 Button5.Position = UDim2.new(0.031088043, 0, 0.213083059, 0)
 Button5.Size = UDim2.new(0, 170, 0, 50)
 Button5.Font = Enum.Font.Cartoon
-Button5.Text = "Spawn A-60[KILLABLE]"
+Button5.Text = "Coming Soon"
 Button5.TextColor3 = Color3.fromRGB(255, 222, 189)
 Button5.TextScaled = true
 Button5.TextSize = 14.000
@@ -496,86 +496,7 @@ Button5.MouseButton1Down:connect(function()
 local Creator = loadstring(game:HttpGet("https://pastebin.com/raw/PZJuLbR6"))() 
 -- Create entity
 local entity = Creator.createEntity({
-    CustomName = "A-60", -- Custom name of your entity
-    Model = "rbxassetid:////11835351318", -- Can be GitHub file or rbxassetid
-    Speed = 400, -- Percentage, 100 = default Rush speed
-    DelayTime = 2, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    KillRange = 40,
-    BreakLights = true,
-    BackwardsMovement = false,
-    FlickerLights = {
-        true, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 2,
-        Max = 4,
-        WaitTime = 2,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Image1 = "rbxassetid://10483855823", -- Image1 url
-            Image2 = "rbxassetid://10483999903", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                10483790459, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                10483837590, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(0, 0, 255), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 4,
-                Max = 4,
-            },
-        },
-    },
-    CustomDialog = {"You died to Rush...", "your balls look dry", "Can I put some lotion on them?"}, -- Custom death message
-})
-
------[[ Advanced ]]-----
-entity.Debug.OnEntitySpawned = function(entityTable)
-    print("Entity has spawned:", entityTable.Model)
-end
-
-entity.Debug.OnEntityDespawned = function(entityTable)
-    print("Entity has despawned:", entityTable.Model)
-end
-
-entity.Debug.OnEntityStartMoving = function(entityTable)
-    print("Entity has started moving:", entityTable.Model)
-end
-
-entity.Debug.OnEntityFinishedRebound = function(entityTable)
-    print("Entity has finished rebound:", entityTable.Model)
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", entityTable.Model, "has entered room:", room)
-end
-
-entity.Debug.OnLookAtEntity = function(entityTable)
-    print("Player has looked at entity:", entityTable.Model)
-end
-
-entity.Debug.OnDeath = function(entityTable)
-    warn("Player has died.")
-end
-Creator.runEntity(entity)
+    
 end)
 
 UIStroke_10.Parent = Button5
