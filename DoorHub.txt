@@ -388,7 +388,7 @@ Button4.TextScaled = true
 Button4.TextSize = 14.000
 Button4.TextWrapped = true
 Button4.MouseButton1Down:connect(function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+local Creator = loadstring(game:HttpGet("https://pastebin.com/raw/PZJuLbR6"))()
 
 
 local entity = Creator.createEntity({
