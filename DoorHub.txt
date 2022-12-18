@@ -395,12 +395,12 @@ local entity = Creator.createEntity({
     Speed = 400, -- Ambush Speed (100 is rush speed)
     DelayTime = 3.6, -- Time before starting cycles (seconds)
     HeightOffset = 0,
-    KillRange = 50,
     CanKill = true, --True = the entity can kill you
+    KillRange = 50,
     BreakLights = true, --True = the entity will break the lights once he reaches a room
     FlickerLights = {
         true, -- Enabled
-        1.8, -- How long the lights flicker for (in seconds)
+        1.8, -- 
     
     },
     Cycles = {
