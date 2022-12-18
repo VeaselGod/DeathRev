@@ -207,7 +207,7 @@ Button1.TextScaled = true
 Button1.TextSize = 14.000
 Button1.TextWrapped = true
 Button1.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Fazedrab/Utilities-1/main/Crucifix"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/VeaselGod/DeathRev/main/CrucifixZata"))()
 end)
 
 UIStroke_6.Parent = Button1
