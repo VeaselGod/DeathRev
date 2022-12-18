@@ -493,10 +493,7 @@ Button5.TextScaled = true
 Button5.TextSize = 14.000
 Button5.TextWrapped = true
 Button5.MouseButton1Down:connect(function()
-local Creator = loadstring(game:HttpGet("https://pastebin.com/raw/PZJuLbR6"))() 
--- Create entity
-local entity = Creator.createEntity({
-    
+    print(i want some girl)
 end)
 
 UIStroke_10.Parent = Button5
