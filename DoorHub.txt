@@ -398,6 +398,7 @@ local entity = Creator.createEntity({
     CanKill = true, --True = the entity can kill you
     KillRange = 50,
     BreakLights = true, --True = the entity will break the lights once he reaches a room
+    BackwardsMovement = true,
     FlickerLights = {
         true, -- Enabled
         1.8, -- 
