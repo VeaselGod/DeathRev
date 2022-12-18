@@ -389,14 +389,13 @@ Button4.TextSize = 14.000
 Button4.TextWrapped = true
 Button4.MouseButton1Down:connect(function()
 local Creator = loadstring(game:HttpGet("https://pastebin.com/raw/PZJuLbR6"))()
-
-
 local entity = Creator.createEntity({
     CustomName = "Ambush", -- Custom name of your entity
     Model = "https://github.com/RegularVynixu/Utilities/blob/main/Doors%20Entity%20Spawner/Models/Ambush.rbxm?raw=true", -- Can be GitHub file or rbxassetid --ignore
     Speed = 400, -- Ambush Speed (100 is rush speed)
     DelayTime = 3.6, -- Time before starting cycles (seconds)
     HeightOffset = 0,
+    KillRange = 50,
     CanKill = true, --True = the entity can kill you
     BreakLights = true, --True = the entity will break the lights once he reaches a room
     FlickerLights = {
@@ -443,26 +442,32 @@ local entity = Creator.createEntity({
 })
 
 
-entity.Debug.OnEntitySpawned = function(entityModel)
-    print("Entity has spawned:", entityModel) 
-    wait(2.3)  --The thing that happens once the entity has spawned.
-    game.Workspace.Ambience_Ambush:Play()
+entity.Debug.OnEntitySpawned = function(entityTable)
+    print("Entity has spawned:", entityTable.Model)
 end
 
-entity.Debug.OnEntityDespawned = function(entityModel)
-    print("Entity has despawned:", mentityModelodel)  --The thing that happens once the entity has Despawned.
+entity.Debug.OnEntityDespawned = function(entityTable)
+    print("Entity has despawned:", entityTable.Model)
 end
 
-entity.Debug.OnEntityStartMoving = function(entityModel)
-    print("Entity has started moving:", entityModel)   --The thing that happens once the entity starts Moving.
+entity.Debug.OnEntityStartMoving = function(entityTable)
+    print("Entity has started moving:", entityTable.Model)
 end
 
-entity.Debug.OnEntityFinishedRebound = function(entityModel)
-    print("Entity finished rebound:", entityModel) --Thing that happens when it finishes a rebound.
+entity.Debug.OnEntityFinishedRebound = function(entityTable)
+    print("Entity has finished rebound:", entityTable.Model)
 end
 
-entity.Debug.OnDeath = function()
-    warn("You died.")  --Thing that happens when you die to the entity.
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", entityTable.Model, "has entered room:", room)
+end
+
+entity.Debug.OnLookAtEntity = function(entityTable)
+    print("Player has looked at entity:", entityTable.Model)
+end
+
+entity.Debug.OnDeath = function(entityTable)
+    warn("Player has died.")
 end
 Creator.runEntity(entity)
 end)
