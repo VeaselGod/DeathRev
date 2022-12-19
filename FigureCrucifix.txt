@@ -348,6 +348,3 @@ dupeCrucifix.Event:Connect(function(time, entityRoot)
     task.wait(0.5)
     Cross:Remove()
 end)
-
--- credits
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "fire made by penguin")
