@@ -1,5 +1,5 @@
 local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
-		local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
+local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
 		local Candle = game:GetObjects("rbxassetid://11630702537")[1]
 		Candle.Parent = game.Players.LocalPlayer.Backpack
 		local plr = game.Players.LocalPlayer
