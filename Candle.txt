@@ -53,9 +53,9 @@ local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reg
 		if plr.PlayerGui.MainUI.ItemShop.Visible then
 			CustomShop.CreateItem(Candle, {
 				Title = "Guiding Candle",
-				Desc = "קг๏ςєє๔ คՇ ץ๏ยг ๏ฬภ гเรк.",
+				Desc = "Proceed at your own risk.",
 				Image = "rbxassetid://11622366799",
-				Price = 75,
+				Price = 50,
 				Stack = 1,
 			})
 		else
@@ -74,38 +74,7 @@ firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "I dont feel rig
 game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Frame["Floors Escaped"].Text = "Floors Escaped (2)"
 
 -- Lighting Setup
-game.Lighting.Caves.Enabled = true
+game.Lighting.Caves.Enabled = false
 game.Lighting.Bloom.Enabled = true
 game.Lighting.FogEnd = "75"
 game.Lighting.FogStart = "10"
-
--- Figure Room Setup (50)
-if game.ReplicatedStorage.GameData.LatestRoom.Value == 50 then
-	firesignal(game.ReplicatedStorage.Bricks.UseEventModule.OnClientEvent, "breakLights", workspace.CurrentRooms["50"], 0.416, 60)
-	workspace.Ambience_Dark:Play()
-end
-
--- Figure Room Setup (100)
-if game.ReplicatedStorage.GameData.LatestRoom.Value == 100 then
-	warn("Player reached room 100")
-	game.Players.LocalPlayer.PlayerGui.MainUI.ToBeContinued.Visible = true
-	wait(7)
-	game.Players.LocalPlayer:Kick("Reached Room 100, room 100 is unavailable so we kicked you. Room 100 is soon. Thanks for using floor 2 mod by iCherryKardess!")
-end
-
--- Room Setup (Loop)
-while task.wait(0.000005) do
-game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Frame["Floors Escaped"].Text = "Floors Escaped (2)" -- if you escaped it will make it floors escaped 2
-    for i,v in pairs(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts:GetDescendants()) do
-  if v:IsA("BasePart") then
-        v.Material = Enum.Material.Limestone
-        v.Color = Color3.new(0.243137, 0.25098, 0.278431) -- sets the color
-        end
-    end
-	-- Door Setup
-	local roomdoor = game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door
-		roomdoor.Material = "Slate"
-		roomdoor.Sign.Material = "Slate"
-		game.Lighting.FogEnd = "75"
-		game.Lighting.FogStart = "10"
-	end
