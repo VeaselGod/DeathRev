@@ -17,7 +17,7 @@ local SelfModules = {
     Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))(),
 }
 local Assets = {
-    KeyItem = game:GetObjects("rbxassetid://11913664522")[1],
+    KeyItem = game:GetObjects("rbxassetid://11703075374")[1],
   
 
 }
